@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.6" group="system" method="upgrade">
+	<name>PLG_SYSTEM_MAKOSA_MANIFEST_NAME</name>
+	<author>Brian Teeman</author>
+	<creationDate>2016-11-01</creationDate>
+	<copyright>(c) 2016 Brian Teeman All rights reserved.</copyright>
+	<authorEmail>brian@teeman.net</authorEmail>
+	<authorUrl>https://brian.teeman.net</authorUrl>
+	<version>1.0.0</version>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description>PLG_SYSTEM_MAKOSA_MANIFEST_DESCRIPTION</description>
+	<updateservers>
+		<server type="extension" priority="1" name="Makosa Update Site">https://raw.githubusercontent.com/brianteeman/makosa/master/manifest.xml</server>
+	</updateservers>
+	<files>
+		<folder>fields</folder>
+		<folder>tmpl</folder>
+		<filename plugin="makosa">makosa.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_makosa.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_makosa.sys.ini</language>
+	</languages>
+	<media folder="media" destination="plg_makosa">
+		<folder>images</folder>
+	</media>
+<config>
+	<fields name="params">
+		<fieldset name="basic">
+
+
+		</fieldset>
+	</fields>
+</config>
+</extension>
