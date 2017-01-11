@@ -70,15 +70,15 @@ class plgSystemMakosa extends JPlugin
 
 
 
-	public static function checkError($error)
+	public static function checkError(&$error)
 	{
-			$error="";
 			
 			$app = JFactory::getApplication();
 			
-			if ($app->isAdmin() || ((int) $error->getCode() == 404)){
-				
-				$this->displayMakosa();
+            if (!$app->isAdmin() and ($error->getCode() == 404)) {
+			    header('HTTP/1.0 404 Not Found');
+				echo "hello world";
+			//	$this->displayMakosa();
 				exit();
 			}
 			else JError::customErrorPage($error);   
